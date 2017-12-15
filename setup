@@ -1,0 +1,96 @@
+#!/bin/bash
+# v0.1.0
+
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
+  BASE="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$BASE/$SOURCE" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+done
+SRC="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
+grace () {
+    if [ $1 = "start" ]; then
+        read -p "Press any key to begin setup..." -n 1 -r
+        printf "\n"
+    elif [ $1 = "end" ]; then
+        read -p "Press any key to end setup..." -n 1 -r
+        echo "Goodbye!"
+        printf "\n"
+    fi
+}
+
+next () {
+    read -n 1 -rs
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        $1; printf "\n"
+    else
+        printf "\nSkipping...\n\n";
+    fi
+}
+
+managers () {
+    printf "\n";
+    xcode-select --install;
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
+    \curl -sSL https://get.rvm.io | bash -s stable --ruby;
+    sudo easy_install pip;
+}
+
+tools () {
+    printf "\n";
+    brew install pandoc;                    # File conversion
+    brew install mpv;                       # Media player
+    brew install aria2;                     # Command-line p2p
+    brew install tag;                       # Command-line tags
+    brew install trash;                     # Command-line trash
+    brew tap caskroom/fonts;                # Access homebrew fonts
+    brew cask install font-source-code-pro; # Command-line dev font
+    brew tap homebrew/science;              # Tap for R
+    # brew install r;                         # Language for statistical analysis
+    brew install node;                      # Web development environment
+    brew install heroku;                    # Toolbelt for Heroku
+    npm install -g grunt-cli;               # Global Grunt install
+    npm install -g bower;                   # Global Bower install
+    npm install -g nodemon;                 # Global Nodemon install
+    npm install -g bower-installer;         # Global Bower installer
+    npm install -g uglify-js;               # Global Uglify
+    sudo gem install sass;                  # Install SASS
+    sudo gem install bundler;               # Install Bundler for Jekyll
+    sudo gem install jekyll;                # Blog development environment
+    sudo gem install iStats;                # Command-line stat tracking
+    sudo gem install kramdown rouge;        # Highlighting for Jekyll
+    brew install profanity;                 # Command-line Google Chat
+    bundle install;                         # To initialise the website
+    # bundle exec jekyll serve;             # To serve the website
+}
+
+files () {
+    printf "\n";
+    FILES="$(find "$SRC/dotfiles" -name ".*")"
+    for file in $FILES
+        do
+            ln -sfv "$file" $HOME
+        done;
+}
+
+keys () {
+    printf "\n";
+    cd ~/ && ssh-keygen -t rsa
+}
+
+grace start
+
+    printf "\e[0;33m>\e[0m Install package managers? [Y/N] "
+    next managers
+
+    printf "\e[0;33m>\e[0m Copy configuration files? [Y/N] "
+    next files
+
+    printf "\e[0;33m>\e[0m Install utilities? [Y/N] "
+    next tools
+
+    printf "\e[0;33m>\e[0m Generate shell keys? [Y/N] "
+    next keys
+
+grace end
