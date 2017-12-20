@@ -61,7 +61,7 @@ tools () {
     sudo gem install iStats;                # Command-line stat tracking
     sudo gem install kramdown rouge;        # Highlighting for Jekyll
     brew install profanity;                 # Command-line Google Chat
-    bundle install;                         # To initialise the website
+    # bundle install;                         # To initialise the website
     # bundle exec jekyll serve;             # To serve the website
 }
 
