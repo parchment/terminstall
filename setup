@@ -1,5 +1,5 @@
 #!/bin/bash
-# v0.1.0
+# v1.0.0
 
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
@@ -40,21 +40,23 @@ managers () {
 tools () {
     printf "\n";
     brew install pandoc;                    # File conversion
+    brew cask install google-hangouts       # Google Voice and Video plugin
     brew install mpv;                       # Media player
     brew install aria2;                     # Command-line p2p
     brew install tag;                       # Command-line tags
     brew install trash;                     # Command-line trash
     brew tap caskroom/fonts;                # Access homebrew fonts
     brew cask install font-source-code-pro; # Command-line dev font
+    brew cask install font-latin-modern;     # Working font
     brew tap homebrew/science;              # Tap for R
-    # brew install r;                         # Language for statistical analysis
+    brew install r;                         # Language for statistical analysis
     brew install node;                      # Web development environment
     brew install heroku;                    # Toolbelt for Heroku
-    npm install -g grunt-cli;               # Global Grunt install
-    npm install -g bower;                   # Global Bower install
-    npm install -g nodemon;                 # Global Nodemon install
-    npm install -g bower-installer;         # Global Bower installer
-    npm install -g uglify-js;               # Global Uglify
+    # npm install -g grunt-cli;               # Global Grunt install
+    # npm install -g bower;                   # Global Bower install
+    # npm install -g nodemon;                 # Global Nodemon install
+    # npm install -g bower-installer;         # Global Bower installer
+    # npm install -g uglify-js;               # Global Uglify
     sudo gem install sass;                  # Install SASS
     sudo gem install bundler;               # Install Bundler for Jekyll
     sudo gem install jekyll;                # Blog development environment
@@ -63,6 +65,18 @@ tools () {
     brew install profanity;                 # Command-line Google Chat
     # bundle install;                         # To initialise the website
     # bundle exec jekyll serve;             # To serve the website
+}
+
+apps () {
+    brew cask install --appdir="/Applications" atom;        # Text editor
+    brew cask install --appdir="/Applications" github       # Github Desktop
+    brew cask install --appdir="/Applications" alfred       # Spotlight alternative
+    brew cask install --appdir="/Applications" transmit     # FTP application
+    brew cask install --appdir="/Applications" firefox      # Safari alternative
+    brew cask install --appdir="/Applications" sequel-pro   # MSQL GUI
+    brew cask install --appdir="/Applications" pdfexpert    # PDF viewer/editor
+    brew cask install --appdir="/Applications" mendeley     # Citation manager
+    brew cask install --appdir="/Applications" dropbox      # Cloud storage solution
 }
 
 files () {
@@ -89,6 +103,9 @@ grace start
 
     printf "\e[0;33m>\e[0m Install utilities? [Y/N] "
     next tools
+
+    printf "\e[0;33m>\e[0m Install applications? [Y/N] "
+    next apps
 
     printf "\e[0;33m>\e[0m Generate shell keys? [Y/N] "
     next keys
