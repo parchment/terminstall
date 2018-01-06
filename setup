@@ -1,5 +1,5 @@
 #!/bin/bash
-# v1.0.0
+# v1.0.1
 
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
@@ -68,6 +68,7 @@ tools () {
 }
 
 apps () {
+    printf "\n";
     brew cask install --appdir="/Applications" atom;        # Text editor
     brew cask install --appdir="/Applications" github       # Github Desktop
     brew cask install --appdir="/Applications" alfred       # Spotlight alternative
