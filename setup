@@ -1,5 +1,5 @@
 #!/bin/bash
-# v1.0.1
+# v1.1.1
 
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
@@ -47,7 +47,8 @@ tools () {
     brew install trash;                     # Command-line trash
     brew tap caskroom/fonts;                # Access homebrew fonts
     brew cask install font-source-code-pro; # Command-line dev font
-    brew cask install font-latin-modern;     # Working font
+    brew cask install flash-npapi && cp -R /usr/local/Caskroom/flash-npapi/*/* $HOME/Downloads/;
+    brew cask install font-latin-modern;    # Working font
     brew tap homebrew/science;              # Tap for R
     brew install r;                         # Language for statistical analysis
     brew install node;                      # Web development environment
@@ -69,15 +70,17 @@ tools () {
 
 apps () {
     printf "\n";
-    brew cask install --appdir="/Applications" atom;        # Text editor
-    brew cask install --appdir="/Applications" github       # Github Desktop
-    brew cask install --appdir="/Applications" alfred       # Spotlight alternative
-    brew cask install --appdir="/Applications" transmit     # FTP application
-    brew cask install --appdir="/Applications" firefox      # Safari alternative
-    brew cask install --appdir="/Applications" sequel-pro   # MSQL GUI
-    brew cask install --appdir="/Applications" pdfexpert    # PDF viewer/editor
-    brew cask install --appdir="/Applications" mendeley     # Citation manager
-    brew cask install --appdir="/Applications" dropbox      # Cloud storage solution
+    brew cask install --appdir="/Applications" atom;         # Text editor
+    brew cask install --appdir="/Applications" github;       # Github Desktop
+    brew cask install --appdir="/Applications" alfred;       # Spotlight alternative
+    brew cask install --appdir="/Applications" transmit;     # FTP application
+    brew cask install --appdir="/Applications" firefox;      # Safari alternative
+    brew cask install --appdir="/Applications" sequel-pro;   # MSQL GUI
+    brew cask install --appdir="/Applications" pdfexpert;    # PDF viewer/editor
+    brew cask install --appdir="/Applications" mendeley;     # Citation manager
+    brew cask install --appdir="/Applications" dropbox;      # Cloud storage solution
+    brew cask install --appdir="/Applications" sketch;       # Vector illustration
+    brew cask install basictex && cp -R /usr/local/Caskroom/basictex/*/* $HOME/Downloads/;
 }
 
 files () {
