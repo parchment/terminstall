@@ -40,15 +40,15 @@ managers () {
 tools () {
     printf "\n";
     brew install pandoc;                    # File conversion
-    brew cask install google-hangouts       # Google Voice and Video plugin
+    brew cask install google-hangouts;      # Google Voice and Video plugin
     brew install mpv;                       # Media player
     brew install aria2;                     # Command-line p2p
     brew install tag;                       # Command-line tags
     brew install trash;                     # Command-line trash
     brew tap caskroom/fonts;                # Access homebrew fonts
     brew cask install font-source-code-pro; # Command-line dev font
-    brew cask install flash-npapi && cp -R /usr/local/Caskroom/flash-npapi/*/* $HOME/Downloads/;
     brew cask install font-latin-modern;    # Working font
+    brew cask install flash-npapi && cp -R /usr/local/Caskroom/flash-npapi/*/* $HOME/Downloads/;
     brew tap homebrew/science;              # Tap for R
     brew install r;                         # Language for statistical analysis
     brew install node;                      # Web development environment
