@@ -47,6 +47,7 @@ brew install aria2                                      # Command-line p2p
 brew install unrar                                      # Command-line unrar
 brew install mysql                                      # MySQL database server
 brew install handbrake                                  # Media/codec conversion
+brew install tmux                                       # SCreen multiplexer
 brew install irssi                                      # IRC client
 gem install iStats                                      # Hardware monitoring
 brew tap homebrew/services
