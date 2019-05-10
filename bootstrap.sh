@@ -7,6 +7,8 @@ function syncIt() {
 		--exclude ".DS_Store" \
 		--exclude "bootstrap.sh" \
 		--exclude "brew.sh" \
+		--exclude "LICENSE" \
+		--exclude "README.md" \
 		-avh --no-perms . ~;
 	source ~/.bash_profile;
 }
