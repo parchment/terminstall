@@ -49,8 +49,9 @@ brew install mysql                                      # MySQL database server
 brew install handbrake                                  # Media/codec conversion
 brew install tmux                                       # SCreen multiplexer
 brew install irssi                                      # IRC client
-gem install iStats                                      # Hardware monitoring
+brew install jq                                         # JSON navigator
 brew tap homebrew/services
+sudo gem install iStats                                      # Hardware monitoring
 
 # Global Node installs
 brew install node                                       # Web development environment
