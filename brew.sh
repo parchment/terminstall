@@ -46,7 +46,8 @@ brew install mpv                                        # Media player
 brew install aria2                                      # Command-line p2p
 brew install unrar                                      # Command-line unrar
 brew install mysql                                      # MySQL database server
-brew install postgres
+brew install postgres                                   # Postgres database server
+brew install jrnl                                       # Command-line journal
 brew install handbrake                                  # Media/codec conversion
 brew install tmux                                       # SCreen multiplexer
 brew install irssi                                      # IRC client
