@@ -131,3 +131,7 @@ alias aria="open ~/Documents/aria/docs/index.html; cd ~/Downloads && aria2c --en
 
 # Compile Markdown into Word Document with front matter and bibliography
 alias pandocx="pandoc --filter pandoc-citeproc metadata.yaml -s *.md -o compiled.docx"
+
+# Start/stop postgres server
+alias poststart="pg_ctl -D /usr/local/var/postgres start && brew services start postgresql"
+alias poststop="pg_ctl -D /usr/local/var/postgres stop && brew services stop postgresql"
