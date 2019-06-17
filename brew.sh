@@ -41,7 +41,7 @@ brew install git-lfs
 brew install ssh-copy-id
 brew install pandoc                                     # File conversion
 brew install pandoc-citeproc                            # Bibliography conversion
-brew install heroku                                     # Toolbelt for Heroku
+brew tap heroku/brew && brew install heroku             # Toolbelt for Heroku
 brew install mpv                                        # Media player
 brew install aria2                                      # Command-line p2p
 brew install unrar                                      # Command-line unrar
@@ -53,7 +53,9 @@ brew install tmux                                       # SCreen multiplexer
 brew install irssi                                      # IRC client
 brew install jq                                         # JSON navigator
 brew tap homebrew/services
-sudo gem install iStats                                      # Hardware monitoring
+sudo gem install iStats                                 # Hardware monitoring
+sudo gem install sass                                   # Syntactically awesome
+npm install -g nodemon                                  # Node demon for ease of use
 
 # Global Node installs
 brew install node                                       # Web development environment
