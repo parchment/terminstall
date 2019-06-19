@@ -53,6 +53,7 @@ brew install tmux                                       # SCreen multiplexer
 brew install irssi                                      # IRC client
 brew install jq                                         # JSON navigator
 brew tap homebrew/services
+brew install mendeley                                   # Reference manager
 sudo gem install iStats                                 # Hardware monitoring
 sudo gem install sass                                   # Syntactically awesome
 npm install -g nodemon                                  # Node demon for ease of use
@@ -68,7 +69,6 @@ brew cask install --appdir="/Applications" github        # Github Desktop
 brew cask install --appdir="/Applications" firefox       # Safari alternative
 brew cask install --appdir="/Applications" google-chrome # Safari alternative
 brew cask install --appdir="/Applications" pdf-expert    # PDF viewer/editor
-brew cask install --appdir="/Applications" bookends      # Citation manager
 brew cask install --appdir="/Applications" tableplus     # Relational DB editor
 brew cask install --appdir="/Applications" dropbox       # Cloud storage
 brew cask install --appdir="/Applications" sketch        # Vector illustration
