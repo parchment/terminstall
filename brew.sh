@@ -65,7 +65,7 @@ npm install -g grunt-cli                                # Global Grunt install
 
 # Install applications
 brew cask install --appdir="/Applications" atom          # Text editor
-brew cask install --appdir="/Applications" github        # Github Desktop
+brew cask install --appdir="/Applications" tower         # Git client
 brew cask install --appdir="/Applications" firefox       # Safari alternative
 brew cask install --appdir="/Applications" google-chrome # Safari alternative
 brew cask install --appdir="/Applications" pdf-expert    # PDF viewer/editor
