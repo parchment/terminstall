@@ -53,7 +53,6 @@ brew install tmux                                       # SCreen multiplexer
 brew install irssi                                      # IRC client
 brew install jq                                         # JSON navigator
 brew tap homebrew/services
-brew install mendeley                                   # Reference manager
 sudo gem install iStats                                 # Hardware monitoring
 sudo gem install sass                                   # Syntactically awesome
 npm install -g nodemon                                  # Node demon for ease of use
@@ -73,6 +72,7 @@ brew cask install --appdir="/Applications" tableplus     # Relational DB editor
 brew cask install --appdir="/Applications" dropbox       # Cloud storage
 brew cask install --appdir="/Applications" sketch        # Vector illustration
 brew cask install --appdir="/Applications" transmit      # FTP manager
+brew cask install --appdir="/Applications" mendeley      # Reference manager
 
 # Remove outdated versions from the cellar.
 brew cleanup
