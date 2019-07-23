@@ -52,19 +52,20 @@ brew install handbrake                                  # Media/codec conversion
 brew install tmux                                       # SCreen multiplexer
 brew install irssi                                      # IRC client
 brew install jq                                         # JSON navigator
+brew install csvkit                                     # CSV utilities
 brew tap homebrew/services
 sudo gem install iStats                                 # Hardware monitoring
 sudo gem install sass                                   # Syntactically awesome
-npm install -g nodemon                                  # Node demon for ease of use
 
 # Global Node installs
 brew install node                                       # Web development environment
+npm install -g nodemon                                  # Node demon for ease of use
 npm install -g n                                        # Node version manager
 npm install -g grunt-cli                                # Global Grunt install
 
 # Install applications
 brew cask install --appdir="/Applications" atom          # Text editor
-brew cask install --appdir="/Applications" tower         # Git client
+brew cask install --appdir="/Applications" github        # Git client
 brew cask install --appdir="/Applications" firefox       # Safari alternative
 brew cask install --appdir="/Applications" google-chrome # Safari alternative
 brew cask install --appdir="/Applications" pdf-expert    # PDF viewer/editor
