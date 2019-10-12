@@ -74,6 +74,9 @@ ZSH_THEME="commoner"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+# Autojump init
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
