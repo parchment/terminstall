@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/zsh
 
 # Install command-line tools using Homebrew.s
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -31,7 +31,7 @@ brew tap bramstein/webfonttools
 brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
-brew tap caskroom/fonts;                                # Access homebrew fonts
+brew tap homebrew/cask-fonts;                           # Access homebrew fonts
 brew cask install font-source-code-pro;                 # Command-line dev font
 
 # Install other useful binaries.
@@ -50,6 +50,7 @@ brew install postgres                                   # Postgres database serv
 brew install jrnl                                       # Command-line journal
 brew install handbrake                                  # Media/codec conversion
 brew install tmux                                       # SCreen multiplexer
+brew install autojump                                   # File navigation with ease
 brew install irssi                                      # IRC client
 brew install jq                                         # JSON navigator
 brew install csvkit                                     # CSV utilities

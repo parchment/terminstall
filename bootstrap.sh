@@ -1,25 +1,24 @@
-#!/usr/bin/env bash
+#!/bin/zsh
 
-cd "$(dirname "${BASH_SOURCE}")";
+cd "$(dirname ${(%):-%N})";
 
 function syncIt() {
+	rsync -avh common.zsh-theme $ZSH/custom/themes/
 	rsync -v --exclude ".git/" \
 		--exclude ".DS_Store" \
 		--exclude "bootstrap.sh" \
 		--exclude "brew.sh" \
 		--exclude "LICENSE" \
 		--exclude "README.md" \
+		--exclude "common.zsh-theme" \
 		-avh --no-perms . ~;
-	source ~/.bash_profile;
+	source ~/.zshrc;
 }
 
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
+read "?This may overwrite existing files in your home directory. Are you sure? (y/n) ";
+if [[ $REPLY =~ ^[Yy]$ ]]; then
 	syncIt;
-else
-	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
-	echo "";
-	if [[ $REPLY =~ ^[Yy]$ ]]; then
-		syncIt;
-	fi;
 fi;
+
 unset syncIt;
+cd $HOME;
