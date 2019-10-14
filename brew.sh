@@ -55,7 +55,8 @@ brew install irssi                                      # IRC client
 brew install jq                                         # JSON navigator
 brew install csvkit                                     # CSV utilities
 brew tap homebrew/services
-sudo pip3 install papis
+sudo pip3 install papis					# CLI Reference manager
+sudo gem install gist					# Github Gist manager
 sudo gem install iStats                                 # Hardware monitoring
 sudo gem install sass                                   # Syntactically awesome
 
