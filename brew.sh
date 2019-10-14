@@ -71,10 +71,13 @@ brew cask install --appdir="/Applications" firefox       # Safari alternative
 brew cask install --appdir="/Applications" google-chrome # Safari alternative
 brew cask install --appdir="/Applications" pdf-expert    # PDF viewer/editor
 brew cask install --appdir="/Applications" tableplus     # Relational DB editor
-brew cask install --appdir="/Applications" dropbox       # Cloud storage
+# brew cask install --appdir="/Applications" dropbox       # Cloud storage
 brew cask install --appdir="/Applications" sketch        # Vector illustration
 brew cask install --appdir="/Applications" transmit      # FTP manager
-brew cask install --appdir="/Applications" mendeley      # Reference manager
+brew cask install --appdir="/Applications" mendeley-reference-manager      # Reference manager
+
+# Install Oh-My-Zsh
+sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" & exit
 
 # Remove outdated versions from the cellar.
 brew cleanup
