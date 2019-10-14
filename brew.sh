@@ -33,6 +33,7 @@ brew install sfnt2woff-zopfli
 brew install woff2
 brew tap homebrew/cask-fonts;                           # Access homebrew fonts
 brew cask install font-source-code-pro;                 # Command-line dev font
+brew cask install mpv                                   # Media player
 
 # Install other useful binaries.
 brew install ack
@@ -42,7 +43,6 @@ brew install ssh-copy-id
 brew install pandoc                                     # File conversion
 brew install pandoc-citeproc                            # Bibliography conversion
 brew tap heroku/brew && brew install heroku             # Toolbelt for Heroku
-brew install mpv                                        # Media player
 brew install aria2                                      # Command-line p2p
 brew install unrar                                      # Command-line unrar
 brew install mysql                                      # MySQL database server
