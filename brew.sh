@@ -55,6 +55,7 @@ brew install irssi                                      # IRC client
 brew install jq                                         # JSON navigator
 brew install csvkit                                     # CSV utilities
 brew tap homebrew/services
+sudo pip3 install papis
 sudo gem install iStats                                 # Hardware monitoring
 sudo gem install sass                                   # Syntactically awesome
 
@@ -66,7 +67,6 @@ npm install -g grunt-cli                                # Global Grunt install
 
 # Install applications
 brew cask install --appdir="/Applications" atom          # Text editor
-# brew cask install --appdir="/Applications" github        # Git client
 brew cask install --appdir="/Applications" firefox       # Safari alternative
 brew cask install --appdir="/Applications" google-chrome # Safari alternative
 brew cask install --appdir="/Applications" pdf-expert    # PDF viewer/editor
@@ -74,7 +74,6 @@ brew cask install --appdir="/Applications" tableplus     # Relational DB editor
 # brew cask install --appdir="/Applications" dropbox       # Cloud storage
 brew cask install --appdir="/Applications" sketch        # Vector illustration
 brew cask install --appdir="/Applications" transmit      # FTP manager
-brew cask install --appdir="/Applications" mendeley-reference-manager      # Reference manager
 
 # Install Oh-My-Zsh
 sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" & exit
