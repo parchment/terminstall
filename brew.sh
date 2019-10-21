@@ -7,6 +7,10 @@
 brew update
 # Upgrade any already-installed formulae.
 brew upgrade
+# Tap some casks.
+brew tap homebrew/services
+brew tap bramstein/webfonttools
+brew tap homebrew/cask-fonts
 
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -21,63 +25,70 @@ brew install gnu-sed
 brew install wget
 
 # Install more recent versions of some macOS tools.
+brew install ack
 brew install vim
 brew install grep
 brew install openssh
 brew install screen
+brew install tmux                                       # Screen multiplexer
+brew install autojump                                   # File navigation with ease
 
 # Install font tools.
-brew tap bramstein/webfonttools
 brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
-brew tap homebrew/cask-fonts;                           # Access homebrew fonts
-brew cask install font-source-code-pro;                 # Command-line dev font
-brew cask install mpv                                   # Media player
+brew cask install font-source-code-pro
 
-# Install other useful binaries.
-brew install ack
+# Install research tools.
+brew install pandoc                                     # File conversion
+brew install pandoc-citeproc                            # Bibliography conversion
+sudo pip3 install papis					                # CLI Reference manager
+sudo gem install gist					                # Github Gist manager
+
+# Install development tools.
 brew install git
 brew install git-lfs
 brew install ssh-copy-id
-brew install pandoc                                     # File conversion
-brew install pandoc-citeproc                            # Bibliography conversion
 brew tap heroku/brew && brew install heroku             # Toolbelt for Heroku
-brew install aria2                                      # Command-line p2p
-brew install unrar                                      # Command-line unrar
 brew install mysql                                      # MySQL database server
 brew install postgres                                   # Postgres database server
-brew install jrnl                                       # Command-line journal
-brew install handbrake                                  # Media/codec conversion
-brew install tmux                                       # SCreen multiplexer
-brew install autojump                                   # File navigation with ease
-brew install irssi                                      # IRC client
+sudo gem install sass                                   # Syntactically awesome
 brew install jq                                         # JSON navigator
 brew install csvkit                                     # CSV utilities
-brew tap homebrew/services
-sudo pip3 install papis					# CLI Reference manager
-sudo gem install gist					# Github Gist manager
-sudo gem install iStats                                 # Hardware monitoring
-sudo gem install sass                                   # Syntactically awesome
 
-# Global Node installs
+# Install media tools.
+brew install aria2                                      # Command-line p2p
+brew cask install iina                                  # Media player
+brew install handbrake                                  # Media/codec conversion
+
+# Install other useful binaries.
+brew install unrar                                      # Command-line unrar
+brew install jrnl                                       # Command-line journal
+brew install irssi                                      # IRC client
+sudo gem install iStats                                 # Hardware monitoring
+
+# Install browsers.
+brew cask install --appdir="/Applications" firefox
+brew cask install --appdir="/Applications" google-chrome
+brew cask install --appdir="/Applications" beaker-browser
+brew cask install --appdir="/Applications" opera
+
+# Install Node tools globally.
 brew install node                                       # Web development environment
 npm install -g nodemon                                  # Node demon for ease of use
 npm install -g n                                        # Node version manager
 npm install -g grunt-cli                                # Global Grunt install
 
-# Install applications
+# Install applications.
 brew cask install --appdir="/Applications" atom          # Text editor
-brew cask install --appdir="/Applications" firefox       # Safari alternative
-brew cask install --appdir="/Applications" google-chrome # Safari alternative
 brew cask install --appdir="/Applications" pdf-expert    # PDF viewer/editor
 brew cask install --appdir="/Applications" tableplus     # Relational DB editor
-# brew cask install --appdir="/Applications" dropbox       # Cloud storage
+brew cask install --appdir="/Applications" dropbox       # Cloud storage
 brew cask install --appdir="/Applications" sketch        # Vector illustration
 brew cask install --appdir="/Applications" transmit      # FTP manager
 
 # Install Oh-My-Zsh
-sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" & exit
+sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" && exit
 
 # Remove outdated versions from the cellar.
 brew cleanup
