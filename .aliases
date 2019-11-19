@@ -126,6 +126,9 @@ alias path='echo -e ${PATH//:/\\n}'
 # Switch directories and enable Aria file sharing
 alias aria="open ~/Documents/aria/docs/index.html; cd ~/Downloads && aria2c --enable-rpc --rpc-listen-all"
 
+# Command-line Things 3
+alias things="things.sh"
+
 # Compile Markdown into Word Document with front matter and bibliography
 alias pandocx="pandoc --filter pandoc-citeproc metadata.yaml -s *.md -o compiled.docx"
 

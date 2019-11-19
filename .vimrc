@@ -31,3 +31,6 @@ set undofile undodir=~/.vim/undo undolevels=9999 " undo options
 set lazyredraw                                   " enable lazyredraw
 set nocursorline                                 " disable cursorline
 set ttyfast                                      " enable fast terminal connection
+
+syntax enable
+colorscheme pooldark

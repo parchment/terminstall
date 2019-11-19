@@ -42,8 +42,8 @@ brew cask install font-source-code-pro
 # Install research tools.
 brew install pandoc                                     # File conversion
 brew install pandoc-citeproc                            # Bibliography conversion
-sudo pip3 install papis					                # CLI Reference manager
-sudo gem install gist					                # Github Gist manager
+sudo pip3 install papis					                        # CLI Reference manager
+sudo gem install gist					                          # Github Gist manager
 
 # Install development tools.
 brew install git
@@ -63,15 +63,14 @@ brew install handbrake                                  # Media/codec conversion
 
 # Install other useful binaries.
 brew install unrar                                      # Command-line unrar
-brew install jrnl                                       # Command-line journal
-brew install irssi                                      # IRC client
 sudo gem install iStats                                 # Hardware monitoring
+brew tap AlexanderWillner/tap                           # Things 3 CLI integration
+brew install things.sh
 
 # Install browsers.
 brew cask install --appdir="/Applications" firefox
 brew cask install --appdir="/Applications" google-chrome
 brew cask install --appdir="/Applications" beaker-browser
-brew cask install --appdir="/Applications" opera
 
 # Install Node tools globally.
 brew install node                                       # Web development environment
@@ -80,11 +79,11 @@ npm install -g n                                        # Node version manager
 npm install -g grunt-cli                                # Global Grunt install
 
 # Install applications.
-brew cask install --appdir="/Applications" atom          # Text editor
-brew cask install --appdir="/Applications" pdf-expert    # PDF viewer/editor
-brew cask install --appdir="/Applications" tableplus     # Relational DB editor
-brew cask install --appdir="/Applications" dropbox       # Cloud storage
-brew cask install --appdir="/Applications" sketch        # Vector illustration
+brew cask install --appdir="/Applications" atom         # Text editor
+brew cask install --appdir="/Applications" pdf-expert   # PDF viewer/editor
+brew cask install --appdir="/Applications" tableplus    # Relational DB editor
+brew cask install --appdir="/Applications" dropbox      # Cloud storage
+brew cask install --appdir="/Applications" sketch       # Vector illustration
 
 # Remove outdated versions from the cellar.
 brew cleanup
