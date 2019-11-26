@@ -42,7 +42,6 @@ brew cask install font-source-code-pro
 # Install research tools.
 brew install pandoc                                     # File conversion
 brew install pandoc-citeproc                            # Bibliography conversion
-sudo pip3 install papis					                        # CLI Reference manager
 sudo gem install gist					                          # Github Gist manager
 
 # Install development tools.
@@ -66,6 +65,7 @@ brew install unrar                                      # Command-line unrar
 sudo gem install iStats                                 # Hardware monitoring
 brew tap AlexanderWillner/tap                           # Things 3 CLI integration
 brew install things.sh
+brew install youtube-dl                                 # Youtube downloader
 
 # Install browsers.
 brew cask install --appdir="/Applications" firefox
