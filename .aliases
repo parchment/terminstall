@@ -135,3 +135,6 @@ alias pandocx="pandoc --filter pandoc-citeproc metadata.yaml -s *.md -o compiled
 # Start/stop postgres server
 alias poststart="pg_ctl -D /usr/local/var/postgres start && brew services start postgresql"
 alias poststop="pg_ctl -D /usr/local/var/postgres stop && brew services stop postgresql"
+
+# What's My IP?
+alias getip="ipconfig getifaddr en0"
