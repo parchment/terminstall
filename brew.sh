@@ -69,6 +69,8 @@ brew install youtube-dl                                 # Youtube downloader
 brew install miniserve                                  # Simple file serving
 brew install nnn                                        # Better file navigation
 brew install restic                                     # Secure backups
+brew tap k-vernooy/tap                                  # Tetris, because of course!
+brew install tetris
 
 # Install browsers.
 brew cask install --appdir="/Applications" firefox
