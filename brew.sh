@@ -86,9 +86,11 @@ npm install -g grunt-cli                                # Global Grunt install
 # Install applications.
 brew cask install --appdir="/Applications" atom         # Text editor
 brew cask install --appdir="/Applications" pdf-expert   # PDF viewer/editor
+brew cask install --appdir="/Applications" papers      # Reference manager
 brew cask install --appdir="/Applications" tableplus    # Relational DB editor
 brew cask install --appdir="/Applications" dropbox      # Cloud storage
 brew cask install --appdir="/Applications" sketch       # Vector illustration
+brew cask install --appdir="/Applications" guild-wars2  # Downtime!
 
 # Remove outdated versions from the cellar.
 brew cleanup
