@@ -124,7 +124,7 @@ alias reload="exec ${SHELL} -l"
 alias path='echo -e ${PATH//:/\\n}'
 
 # Switch directories and enable Aria file sharing
-alias aria="open ~/Documents/aria/docs/index.html; cd ~/Downloads && aria2c --enable-rpc --rpc-listen-all"
+alias aria="open ~/Documents/webui-aria2/docs/index.html; cd ~/Downloads && aria2c --enable-rpc --rpc-listen-all"
 
 # Command-line Things 3
 alias things="things.sh"

@@ -29,9 +29,8 @@ brew install ack
 brew install vim
 brew install grep
 brew install openssh
-brew install screen
 brew install tmux                                       # Screen multiplexer
-brew install autojump                                   # File navigation with ease
+brew install nnn                                        # Better file navigation
 
 # Install font tools.
 brew install sfnt2woff
@@ -49,11 +48,8 @@ brew install git
 brew install git-lfs
 brew install ssh-copy-id
 brew tap heroku/brew && brew install heroku             # Toolbelt for Heroku
-brew install mysql                                      # MySQL database server
-brew install postgres                                   # Postgres database server
-sudo gem install sass                                   # Syntactically awesome
-brew install jq                                         # JSON navigator
 brew install csvkit                                     # CSV utilities
+sudo gem install sass                                   # Syntactically awesome
 
 # Install media tools.
 brew install aria2                                      # Command-line p2p
@@ -63,14 +59,9 @@ brew install handbrake                                  # Media/codec conversion
 # Install other useful binaries.
 brew install unrar                                      # Command-line unrar
 sudo gem install iStats                                 # Hardware monitoring
-brew tap AlexanderWillner/tap                           # Things 3 CLI integration
-brew install things.sh
+brew tap AlexanderWillner/tap && brew install things.sh # Things 3 CLI integration
 brew install youtube-dl                                 # Youtube downloader
-brew install miniserve                                  # Simple file serving
-brew install nnn                                        # Better file navigation
-brew install restic                                     # Secure backups
-brew tap k-vernooy/tap                                  # Tetris, because of course!
-brew install tetris
+brew tap k-vernooy/tap && brew install tetris           # Tetris, because of course!
 
 # Install browsers.
 brew cask install --appdir="/Applications" firefox
@@ -79,14 +70,13 @@ brew cask install --appdir="/Applications" beaker-browser
 
 # Install Node tools globally.
 brew install node                                       # Web development environment
-npm install -g nodemon                                  # Node demon for ease of use
 npm install -g n                                        # Node version manager
+npm install -g nodemon                                  # Node demon for ease of use
 npm install -g grunt-cli                                # Global Grunt install
 
 # Install applications.
 brew cask install --appdir="/Applications" atom         # Text editor
 brew cask install --appdir="/Applications" pdf-expert   # PDF viewer/editor
-brew cask install --appdir="/Applications" papers      # Reference manager
 brew cask install --appdir="/Applications" tableplus    # Relational DB editor
 brew cask install --appdir="/Applications" dropbox      # Cloud storage
 brew cask install --appdir="/Applications" sketch       # Vector illustration
