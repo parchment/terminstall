@@ -37,6 +37,7 @@ brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
 brew cask install font-source-code-pro
+brew cask install font-ubuntu
 
 # Install research tools.
 brew install pandoc                                     # File conversion
