@@ -76,7 +76,6 @@ npm install -g nodemon                                  # Node demon for ease of
 npm install -g grunt-cli                                # Global Grunt install
 
 # Install applications.
-brew cask install --appdir="/Applications" atom         # Text editor
 brew cask install --appdir="/Applications" pdf-expert   # PDF viewer/editor
 brew cask install --appdir="/Applications" tableplus    # Relational DB editor
 brew cask install --appdir="/Applications" dropbox      # Cloud storage
